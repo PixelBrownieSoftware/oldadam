@@ -1,0 +1,78 @@
+{
+  "survival": {
+    "id": "survival",
+    "label": "Survival",
+    "tier": "Easy",
+    "description": "Keep everybody alive for 20 years. Basic needs are enough for happiness; construction-material mines are unlimited, but fossil fuels are finite.",
+    "population": 750000,
+    "startingBuildings": {
+      "groundwaterWell": 4,
+      "cropFarm": 4,
+      "windTurbine": 1,
+      "solarArray": 1,
+      "hydroTurbine": 1,
+      "coalPowerPlant": 2,
+      "naturalGasPowerPlant": 2,
+      "fossilFuelMine": 2
+    },
+    "reserveYears": 5.5,
+    "mines": "infinite",
+    "buildingLimits": { "geothermalPlant": 8, "hydroTurbine": 12 },
+    "needGrowth": null,
+    "milestoneTrigger": null,
+    "happinessTarget": 1,
+    "dailyBirthRate": 0.000017,
+    "startingMaterials": { "steel": 70, "silicon": 80, "components": 45, "fossilFuel": 1339200 },
+    "virginReserve": { "fossilFuel": 157628000 }
+  },
+  "emancipation": {
+    "id": "emancipation",
+    "label": "Emancipation",
+    "tier": "Medium",
+    "description": "Once you are self-sufficient, people want more: water and energy baselines rise 5-10% per milestone. Mines hold large but finite reserves.",
+    "population": 950000,
+    "startingBuildings": {
+      "groundwaterWell": 2,
+      "cropFarm": 2,
+      "hydroTurbine": 1,
+      "solarArray": 1,
+      "coalPowerPlant": 3,
+      "naturalGasPowerPlant": 5,
+      "fossilFuelMine": 6
+    },
+    "reserveYears": 5.5,
+    "mines": "finite",
+    "buildingLimits": { "geothermalPlant": 6, "hydroTurbine": 9 },
+    "needGrowth": [0.05, 0.1],
+    "milestoneTrigger": "all",
+    "happinessTarget": 1.1,
+    "dailyBirthRate": 0.00001,
+    "startingMaterials": { "steel": 90, "silicon": 110, "components": 65, "fossilFuel": 6696000 },
+    "virginReserve": { "steel": 6000, "silicon": 4000, "components": 3000, "fossilFuel": 130628000 }
+  },
+  "vanguard": {
+    "id": "vanguard",
+    "label": "Vanguard",
+    "tier": "Hard",
+    "description": "Expectations rise 6-12% each time any single resource becomes self-sufficient. Mining is banned: new materials only come from recycling and Bancor trade.",
+    "population": 1200000,
+    "startingBuildings": {
+      "groundwaterWell": 4,
+      "cropFarm": 3,
+      "geothermalPlant": 1,
+      "hydroTurbine": 1,
+      "coalPowerPlant": 3,
+      "naturalGasPowerPlant": 3,
+      "fossilFuelMine": 8
+    },
+    "reserveYears": 2.5,
+    "mines": "banned",
+    "buildingLimits": { "geothermalPlant": 3, "hydroTurbine": 6 },
+    "needGrowth": [0.06, 0.12],
+    "milestoneTrigger": "any",
+    "happinessTarget": 1.15,
+    "dailyBirthRate": 0.000005,
+    "startingMaterials": { "steel": 1720, "silicon": 1900, "components": 1530, "fossilFuel": 6696000 },
+    "virginReserve": { "fossilFuel": 87628000 }
+  }
+}

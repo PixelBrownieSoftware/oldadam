@@ -1,0 +1,110 @@
+the goal of this simulation is to get happinesss up whilst avoiding civilisational collapse.
+your main budget is in resources:
+Water - L
+Food - kcal
+Energy - Kwh
+
+Each turn takes place in a day (you can skip a week as well).
+if there is a water, food or energy deficit, depending on how much deficit there is (current/needed), population health will decline.
+Water will decline fast
+Food will decline slower
+Energy will decline slowest
+when population health is under 50%, people will start dying expodentially relative to how low health is.
+mortality rate = ((0.5 - popHth)/0.5)^2 * 0.5
+health reductions:
+water - 25%/0.25
+energy - 3%/0.03
+food - 10%/0.1
+
+amount of deaths are excecuted on a daily basis.
+
+you have storage for food and water.
+Power stations generate electricity to meet demand each day. Coal- and gas-fired plants draw from
+one shared fossil-fuel inventory measured in gigajoules. Domestic fossil-fuel deposits are finite,
+and prebuilt extraction sites replenish the inventory until those deposits are exhausted; imports
+can then be bought through Bancor. The representative hydroelectric facility is a 10 MW site at
+45% average capacity, and the geothermal facility is a 5 MW plant at 90% average capacity. Hydro varies
+with the seasons and drought years and adds water storage; geothermal is steady, costs more to maintain,
+and both have per-difficulty site limits. Amplifiers (`boosts`) raise the output of a target facility
+type, e.g. geothermal heat on greenhouses.
+
+birth rates are extremely low.
+to build something i.e. solar panel, you need materials and time
+I could put in builders, but this would include difficulty in the simulation (i.e. builders dying due to starvation)
+let's just assume it's built by machines
+every month or day or week you get a certain amount of materials.
+stuff like steel, silicon etc.
+
+you also need materials to maintain these machines.
+potentially you can make machines that make material gains more efficient.
+
+the game takes place on a 20 year timescale
+
+-----Bancor system-----
+this is to solve you having a resource problem i.e. not having enough components
+
+you sell off some water, food, fossil fuels or materials for bancor
+
+you then use that bancor to buy materials to address immediate shortages or store.
+I might add in a use it or loose it system with bancor.
+it's a last resort rather than something you should regularly do
+
+you start with 0 bancor, and you can use it to buy resources should you have a shortage
+but you will be restricted if your bancor is too negative
+if you produce abundance, you can sell some of it for bancor
+if you have too much bancor, you will have to pay a small sum.
+
+
+geopolitical shocks can raise Bancor prices.
+
+---Materials---
+
+The deliveries are the mines that extract new materials. Improving productivity of these mines will yield more materials. For the sake of simplicity, I'll skip the processing part. They add to stock.
+There will be the recycling plants which don't create new materials, they recycle the used up stuff and make it usable once again.
+These are necessary for building and maintenance of things like energy, food, water and even material recyclers.
+when they are used for building they get used up.
+when the machines degrade, they emit materials that get put into a "used up" pile.
+the recyclers turn that used up pile into usable materials.
+split materials into usable and usedUp dictionaries, or some other smart way of organising these categories.
+
+---Difficulty----
+
+Survival (Easy): 
+- the entire goal will be to ensure that everybody survives 20 years. 
+- material mines have infinite materials; fossil-fuel deposits are finite
+- People will be happy by merely having their basic needs met.
+population: 500k people
+start with 3.5 years of reserves
+
+Emancipation (Medium): 
+- Once you become self-sufficient in all areas, people will want more things
+- baseline need may increase permanently by 5-10% every milestone reached (when you acheive self-sufficiency), an exception may be food. 
+- The mines have largely abundant stock of virgin materials, but they do eventually run out depending on how much has been mined. 
+- fossil-fuel deposits are finite and geopolitical shocks can sharply raise import prices
+- It will take more than people to have their basic needs met to be happy.
+- Non-essential services will be available from here.
+population: 1m people
+start with 2.5 years of reserves
+
+Vanguard (Hard): 
+- People will want more, even before you become self-sufficient. 
+- Baselines increase 6-12% (food being an exception) every mileston reached. 
+- A law has been passed that bans the extraction of new resources from mines. The only way to truly get new materials is through trade (Bancor). This was passed with the interest of non-renewables.
+- fossil fuels are one shared finite resource used by coal- and gas-fired power stations
+- The amount of materials need to come from recycling units. You hence, start with more materials than Emancipation or survivial.
+population: 2.5m people
+start with 1.5 years of reserves
+
+Each difficulty starts with prebuilt infrastructure, mostly fossil-fuel power stations, but
+starting generation remains below population demand. Station output is fixed; raising population
+increases needs rather than the output of existing facilities. Robots are assumed to build and
+maintain infrastructure.
+
+----QoL changes----
+Make it so that on the bancor menu it shows, when you sell how much of that resource you have
+And when you buy with bancor, it shows how much of that resource you will have after the transaction
+In the bancor menu have a (where you sell or buy the lots for bancor) a slider based on how much of that resource or bancor you have (0.01)
+And alternatively a place where you can enter a speciic number (on that one, fix the bug where it demands you enter a decimal place when you type a full number)
+In the building projects menu, make it so that it shows how much of those materials you have.
+Generally, I want to reduce the amount of quick switching players have to do between menus.
+Also include a "Help" section in the game that explains the game's mechanics
