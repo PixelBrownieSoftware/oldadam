@@ -111,3 +111,11 @@ and `aria-label` props. Series values correspond by index to the x-values.
 ```sh
 npm run build
 ```
+
+### GitHub Pages
+
+The workflow in `.github/workflows/deploy-pages.yml` builds and deploys the game when changes
+are pushed to `main`. In the repository's **Settings → Pages**, set the build and deployment
+source to **GitHub Actions**. The workflow can also be started manually from the Actions tab.
+GitHub Pages for a private repository requires an eligible GitHub plan; a published Pages site
+is publicly accessible even when its source repository is private.
